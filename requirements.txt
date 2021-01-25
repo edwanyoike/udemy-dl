@@ -5,4 +5,3 @@ requests
 unidecode
 pyOpenSSL
 cloudscraper
-requests[security]

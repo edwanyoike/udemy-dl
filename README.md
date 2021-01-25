@@ -1,18 +1,28 @@
-[![GitHub release](https://img.shields.io/badge/release-v1.0-brightgreen?style=flat-square)](https://github.com/r0oth3x49/udemy-dl/releases/tag/v1.0)
-[![GitHub stars](https://img.shields.io/github/stars/r0oth3x49/udemy-dl.svg?style=flat-square)](https://github.com/r0oth3x49/udemy-dl/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/r0oth3x49/udemy-dl.svg?style=flat-square)](https://github.com/r0oth3x49/udemy-dl/network)
-[![GitHub issues](https://img.shields.io/github/issues/r0oth3x49/udemy-dl.svg?style=flat-square)](https://github.com/r0oth3x49/udemy-dl/issues)
-[![GitHub license](https://img.shields.io/github/license/r0oth3x49/udemy-dl.svg?style=flat-square)](https://github.com/r0oth3x49/udemy-dl/blob/master/LICENSE)
-
-# udemy-dl
-**A cross-platform python based utility to download courses from udemy for personal offline use.**
-
-[![udemy-dl-v1-0.png](https://i.postimg.cc/4y0fH3Hq/udemy-dl-v1-0.png)](https://postimg.cc/Fkj52NZV)
 
 
-### ***Important Note***:
- - Don't share your credentials until the issue is properly tagged/labeled with **account-needed**.
- - Owner of this repository is not responsible for any misuse if you share your credentials with strangers.
+
+
+# command to download a course to a given folder udemy-dl
+**python3 udemy-dl.py https://www.udemy.com/course/artificial-intelligence-games-in-java -k cookies.txt -o "/home/userA/tuts/java/algos"
+
+
+#note cookies.txt contains value extracted from any of this links
+
+### Finding your access token value
+
+ - ***Firefox*** users : [guide by @01ttouch](https://github.com/r0oth3x49/udemy-dl/issues/389#issuecomment-491903900)
+ - ***Chrome*** users : [guide by @01ttouch](https://github.com/r0oth3x49/udemy-dl/issues/389#issuecomment-492569372)
+
+
+## ***How to login with cookie***
+
+The `cookies.txt` file should have the following simple format, eg:
+
+```ini
+access_token=JKU9QNs2IQDBKoYKvOBclSPXN97baf32o1Jo2L9vX
+```
+
+
 
 ## ***Requirements***
 
@@ -30,16 +40,6 @@
 
     pip install -r requirements.txt
 
-## ***HLS streams download requirements***
-- You would need FFmpeg to be installed and added to environment variable so that udemy-dl can access.
-- Download [FFmpeg from here](https://ffmpeg.org/download.html)
-- On ubuntu you can install it via `apt install ffmpeg`.
-- Add to environment variables then udemy-dl will be able to use it when download HLS streams.
-  
-## ***Tested on***
-
-- Windows 7/8/8.1/10
-- Ubuntu-LTS (tested with super user)
 
 ## ***Features***
 - Added proper session management.
@@ -62,29 +62,7 @@
 - Download course to user requested path (option: `-o / --output`).
 - Authentication using cookies (option: `-k / --cookies`).
 
-### Before creating an issue, please do the following:
 
- 1. **Use the GitHub issue search** &mdash; check if the issue is already reported.
- 2. **Check if the issue is already fixed** &mdash; try to reproduce it using the latest `master` in the repository.
- 3. Make sure, that information you are about to report is related to this repository 
-   and not the one available on ***Python's repository, PyPi***, Because this repository cannot be downloaded/installed via pip command.
- 4. Follow issue reporting template properly otherwise the issue will be closed.
-
-
-## ***How to login with cookie***
-
-The `cookies.txt` file should have the following simple format, eg:
-
-```ini
-access_token=JKU9QNs2IQDBKoYKvOBclSPXN97baf32o1Jo2L9vX
-```
-
-### Finding your access token value
-
- - ***Firefox*** users : [guide by @01ttouch](https://github.com/r0oth3x49/udemy-dl/issues/389#issuecomment-491903900)
- - ***Chrome*** users : [guide by @01ttouch](https://github.com/r0oth3x49/udemy-dl/issues/389#issuecomment-492569372)
-
- 
 ## ***Download udemy-dl***
 
 You can download the latest version of udemy-dl by cloning the GitHub repository.
@@ -199,7 +177,3 @@ Example:
   python udemy-dl.py -u user@domain.com -p p4ssw0rd COURSE_URL
 </code></pre>
 
-
-
-## ***TODO***
- - Add support to download course on a flaky connection.
